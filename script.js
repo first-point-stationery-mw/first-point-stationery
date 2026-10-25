@@ -1,139 +1,86 @@
-// ==========================================
-// FIRST POINT STATIONERY
-// Main JavaScript
-// ==========================================
+/* ============================================================
+   FIRST POINT STATIONERY & GENERAL SUPPLIES
+   script.js
+   ============================================================ */
 
+(function () {
+  "use strict";
 
-// ---------- MOBILE NAVIGATION ----------
+  /* ----------------------------------------------------------
+     1. CURRENT YEAR IN FOOTER
+     ---------------------------------------------------------- */
+  const yearEl = document.getElementById("year");
 
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 
-if (menuBtn && navLinks) {
+  /* ----------------------------------------------------------
+     2. MOBILE NAVIGATION MENU
+     ---------------------------------------------------------- */
+  const menuBtn = document.getElementById("menuBtn");
+  const navLinks = document.getElementById("navLinks");
 
-  menuBtn.addEventListener("click", () => {
+  function openMenu() {
+    if (!navLinks || !menuBtn) return;
+    navLinks.classList.add("open");
+    menuBtn.setAttribute("aria-expanded", "true");
+    menuBtn.setAttribute("aria-label", "Close navigation menu");
+    menuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+  }
 
-    // Open or close the mobile menu
-    const isOpen = navLinks.classList.toggle("active");
+  function closeMenu() {
+    if (!navLinks || !menuBtn) return;
+    navLinks.classList.remove("open");
+    menuBtn.setAttribute("aria-expanded", "false");
+    menuBtn.setAttribute("aria-label", "Open navigation menu");
+    menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+  }
 
-    // Update accessibility information
-    menuBtn.setAttribute("aria-expanded", isOpen);
-
-    // Change menu icon
-    menuBtn.innerHTML = isOpen
-      ? '<i class="fa-solid fa-xmark"></i>'
-      : '<i class="fa-solid fa-bars"></i>';
-  });
-
-
-  // Close menu after clicking a navigation link
-  navLinks.querySelectorAll("a").forEach((link) => {
-
-    link.addEventListener("click", () => {
-
-      navLinks.classList.remove("active");
-
-      menuBtn.setAttribute("aria-expanded", "false");
-
-      menuBtn.innerHTML =
-        '<i class="fa-solid fa-bars"></i>';
-    });
-
-  });
-
-}
-
-
-// ---------- AUTOMATIC COPYRIGHT YEAR ----------
-
-const year = document.getElementById("year");
-
-if (year) {
-  year.textContent = new Date().getFullYear();
-}
-
-
-// ---------- SCROLL REVEAL ANIMATION ----------
-
-const revealElements = document.querySelectorAll(".reveal");
-
-if ("IntersectionObserver" in window) {
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-
-      entries.forEach((entry) => {
-
-        if (entry.isIntersecting) {
-
-          entry.target.classList.add("visible");
-
-          // Stop observing after the animation
-          observer.unobserve(entry.target);
-        }
-
-      });
-
-    },
-    {
-      threshold: 0.12
+  function toggleMenu() {
+    if (!navLinks) return;
+    if (navLinks.classList.contains("open")) {
+      closeMenu();
+    } else {
+      openMenu();
     }
-  );
-
-
-  revealElements.forEach((element) => {
-    observer.observe(element);
-  });
-
-} else {
-
-  // Fallback for older browsers
-  revealElements.forEach((element) => {
-    element.classList.add("visible");
-  });
-
-}
-
-
-// ---------- CLOSE MOBILE MENU WHEN CLICKING OUTSIDE ----------
-
-document.addEventListener("click", (event) => {
-
-  if (!menuBtn || !navLinks) return;
-
-  const clickedInsideMenu =
-    navLinks.contains(event.target);
-
-  const clickedMenuButton =
-    menuBtn.contains(event.target);
-
-  if (!clickedInsideMenu && !clickedMenuButton) {
-
-    navLinks.classList.remove("active");
-
-    menuBtn.setAttribute("aria-expanded", "false");
-
-    menuBtn.innerHTML =
-      '<i class="fa-solid fa-bars"></i>';
   }
 
-});
-
-
-// ---------- CLOSE MENU WHEN SCREEN BECOMES LARGE ----------
-
-window.addEventListener("resize", () => {
-
-  if (!menuBtn || !navLinks) return;
-
-  if (window.innerWidth > 768) {
-
-    navLinks.classList.remove("active");
-
-    menuBtn.setAttribute("aria-expanded", "false");
-
-    menuBtn.innerHTML =
-      '<i class="fa-solid fa-bars"></i>';
+  if (menuBtn) {
+    menuBtn.addEventListener("click", toggleMenu);
   }
 
-});
+  // Close the menu when a navigation link is clicked
+  if (navLinks) {
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", closeMenu);
+    });
+  }
+
+  // Close the menu when clicking outside of it
+  document.addEventListener("click", function (event) {
+    if (!navLinks || !menuBtn) return;
+    if (!navLinks.classList.contains("open")) return;
+
+    const clickedInsideMenu = navLinks.contains(event.target);
+    const clickedMenuBtn = menuBtn.contains(event.target);
+
+    if (!clickedInsideMenu && !clickedMenuBtn) {
+      closeMenu();
+    }
+  });
+
+  // Close the menu with the Escape key
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && navLinks && navLinks.classList.contains("open")) {
+      closeMenu();
+      if (menuBtn) menuBtn.focus();
+    }
+  });
+
+  /* ----------------------------------------------------------
+     3. STICKY HEADER SHADOW ON SCROLL
+     ---------------------------------------------------------- */
+  const header = document.querySelector("header");
+
+  function handle
