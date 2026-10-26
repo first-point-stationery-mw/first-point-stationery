@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Printing</title>
+  <desc id="desc">Black-and-white and colour document printing.</desc>
+  <rect width="800" height="600" rx="34" fill="#F7F8FB"/>
+  <path d="M0 0h800v110c-150 42-280-10-410 20C245 160 120 116 0 160Z" fill="#14213D"/>
+  <circle cx="90" cy="78" r="43" fill="#FCA311"/>
+  <path d="M72 78l12 12 25-28" fill="none" stroke="#14213D" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="155" y="67" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#FFFFFF">First Point</text>
+  <text x="155" y="101" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#FCA311">STATIONERY &amp; GENERAL SUPPLIES</text>
+  
+  <rect x="190" y="260" width="420" height="155" rx="24" fill="#263238"/>
+  <rect x="245" y="215" width="310" height="85" rx="12" fill="#607D8B"/>
+  <rect x="265" y="235" width="270" height="42" rx="6" fill="#ECEFF1"/>
+  <rect x="270" y="375" width="260" height="115" fill="#FFFFFF" stroke="#14213D" stroke-width="7"/>
+  <path d="M305 405h190M305 430h150M305 455h175" stroke="#457B9D" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="565" cy="330" r="12" fill="#FCA311"/>
+  <circle cx="600" cy="330" r="12" fill="#25D366"/>
+
+  <rect x="0" y="520" width="800" height="80" rx="0" fill="#14213D"/>
+  <text x="400" y="555" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" fill="#FFFFFF">PRINTING</text>
+  <text x="400" y="584" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#FCA311">Quality • Reliable • Professional</text>
+</svg>

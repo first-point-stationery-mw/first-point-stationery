@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Stationery</title>
+  <desc id="desc">Paper, pens, pencils, calculators and office essentials.</desc>
+  <rect width="800" height="600" rx="34" fill="#F7F8FB"/>
+  <path d="M0 0h800v110c-150 42-280-10-410 20C245 160 120 116 0 160Z" fill="#14213D"/>
+  <circle cx="90" cy="78" r="43" fill="#FCA311"/>
+  <path d="M72 78l12 12 25-28" fill="none" stroke="#14213D" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="155" y="67" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#FFFFFF">First Point</text>
+  <text x="155" y="101" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#FCA311">STATIONERY &amp; GENERAL SUPPLIES</text>
+  
+  <rect x="145" y="205" width="205" height="230" rx="10" fill="#2B4C7E"/>
+  <rect x="165" y="185" width="205" height="230" rx="10" fill="#E63946"/>
+  <rect x="190" y="165" width="205" height="230" rx="10" fill="#457B9D"/>
+  <rect x="445" y="230" width="35" height="190" rx="15" fill="#FCA311" transform="rotate(8 445 230)"/>
+  <rect x="500" y="220" width="35" height="200" rx="15" fill="#E63946" transform="rotate(-7 500 220)"/>
+  <rect x="555" y="225" width="35" height="195" rx="15" fill="#2A9D8F" transform="rotate(10 555 225)"/>
+  <circle cx="620" cy="315" r="52" fill="#FFFFFF" stroke="#14213D" stroke-width="8"/>
+  <path d="M590 345l58-58" stroke="#14213D" stroke-width="12" stroke-linecap="round"/>
+  <path d="M590 345l12-4-8-8z" fill="#14213D"/>
+
+  <rect x="0" y="520" width="800" height="80" rx="0" fill="#14213D"/>
+  <text x="400" y="555" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" fill="#FFFFFF">STATIONERY</text>
+  <text x="400" y="584" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#FCA311">Quality • Reliable • Professional</text>
+</svg>
