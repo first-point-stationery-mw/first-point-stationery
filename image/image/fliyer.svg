@@ -1,0 +1,270 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F5A623"/>
+      <stop offset="100%" stop-color="#F8E71C"/>
+    </linearGradient>
+    <linearGradient id="darkBlueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0A1C4E"/>
+      <stop offset="100%" stop-color="#1A365D"/>
+    </linearGradient>
+    
+    <!-- Drop Shadow for Cards -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+
+    <!-- Clipping paths for images (to make rounded corners) -->
+    <clipPath id="imgClip">
+      <rect x="0" y="0" width="170" height="180" rx="15" />
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="750" fill="#F8F9FA" />
+
+  <!-- Top Right Yellow Wave Shape -->
+  <path d="M 1000 0 L 1000 150 L 850 50 Z" fill="url(#goldGrad)" />
+  
+  <!-- Bottom Right Yellow Wave Shape -->
+  <path d="M 1000 550 L 1000 750 L 750 750 Q 850 650 900 550 Z" fill="url(#goldGrad)" />
+
+  <!-- ================= HEADER SECTION ================= -->
+  
+  <!-- Logo Group (Left) -->
+  <g transform="translate(60, 40)">
+    <!-- Yellow Arc -->
+    <path d="M 10 130 A 100 100 0 0 1 180 100" fill="none" stroke="url(#goldGrad)" stroke-width="12" stroke-linecap="round"/>
+    
+    <!-- 'F' -->
+    <text x="20" y="110" font-family="Arial, sans-serif" font-size="90" font-weight="900" fill="#0A1C4E">F</text>
+    
+    <!-- 'P' -->
+    <text x="95" y="110" font-family="Arial, sans-serif" font-size="90" font-weight="900" fill="url(#goldGrad)">P</text>
+    
+    <!-- Pen Nib (Center) -->
+    <g transform="translate(85, 0)">
+      <path d="M 15 0 L 30 35 L 15 50 L 0 35 Z" fill="#0A1C4E"/>
+      <circle cx="15" cy="35" r="4" fill="#FFF"/>
+      <rect x="13" y="50" width="4" height="50" fill="#0A1C4E"/>
+    </g>
+    
+    <!-- Ruler (Diagonal) -->
+    <g transform="translate(120, 100) rotate(35)">
+      <rect x="0" y="0" width="15" height="70" fill="#0A1C4E"/>
+      <line x1="0" y1="15" x2="5" y2="15" stroke="#FFF" stroke-width="2"/>
+      <line x1="0" y1="25" x2="8" y2="25" stroke="#FFF" stroke-width="2"/>
+      <line x1="0" y1="35" x2="5" y2="35" stroke="#FFF" stroke-width="2"/>
+      <line x1="0" y1="45" x2="8" y2="45" stroke="#FFF" stroke-width="2"/>
+      <line x1="0" y1="55" x2="5" y2="55" stroke="#FFF" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- Main Title -->
+  <g transform="translate(280, 60)">
+    <text x="0" y="50" font-family="Arial, sans-serif" font-size="56" font-weight="900" fill="#0A1C4E">First Point</text>
+    
+    <!-- Stationery Line -->
+    <line x1="0" y1="75" x2="40" y2="75" stroke="#F5A623" stroke-width="3"/>
+    <text x="50" y="85" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#F5A623" letter-spacing="1">STATIONERY</text>
+    <line x1="260" y1="75" x2="300" y2="75" stroke="#F5A623" stroke-width="3"/>
+    
+    <!-- General Supplies -->
+    <text x="50" y="115" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#0A1C4E" letter-spacing="1">&amp; GENERAL SUPPLIES</text>
+  </g>
+
+  <!-- Tagline -->
+  <g transform="translate(280, 200)">
+    <text x="50" y="0" font-family="Arial, sans-serif" font-size="20" font-style="italic" fill="#0A1C4E" text-anchor="middle">Your one-stop point for quality stationery,</text>
+    <text x="50" y="25" font-family="Arial, sans-serif" font-size="20" font-style="italic" fill="#0A1C4E" text-anchor="middle">printing and general supplies.</text>
+  </g>
+
+  <!-- Shop Local Badge (Top Right) -->
+  <g transform="translate(800, 50)">
+    <text x="0" y="20" font-family="'Brush Script MT', cursive, sans-serif" font-size="36" fill="#0A1C4E">Shop Local</text>
+    <text x="0" y="55" font-family="'Brush Script MT', cursive, sans-serif" font-size="36" fill="#0A1C4E">Support Local</text>
+    <path d="M 0 70 Q 60 80 150 60" fill="none" stroke="#F5A623" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Location Badge -->
+  <g transform="translate(760, 160)">
+    <rect x="0" y="0" width="210" height="45" rx="22" fill="#0A1C4E"/>
+    <circle cx="25" cy="22" r="10" fill="#F5A623"/>
+    <circle cx="25" cy="22" r="4" fill="#FFF"/>
+    <text x="45" y="28" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFF">Limbe, Blantyre</text>
+    <text x="45" y="42" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFF">Malawi</text>
+  </g>
+
+  <!-- ================= CARDS SECTION ================= -->
+  
+  <!-- CARD 1: STATIONERY -->
+  <g transform="translate(40, 260)">
+    <rect x="0" y="0" width="175" height="300" rx="15" fill="#FFF" filter="url(#shadow)"/>
+    <!-- Image Placeholder -->
+    <rect x="2.5" y="2.5" width="170" height="180" rx="15" fill="#E0E0E0"/>
+    <text x="85" y="90" font-family="Arial" font-size="12" fill="#888" text-anchor="middle">Insert Stationery Photo</text>
+    
+    <!-- Bottom Dark Blue Banner -->
+    <rect x="0" y="145" width="175" height="45" fill="#0A1C4E"/>
+    <circle cx="30" cy="165" r="18" fill="#F5A623" stroke="#FFF" stroke-width="2"/>
+    <!-- Pencil Icon -->
+    <path d="M 25 155 L 35 165 L 30 170 L 20 160 Z" fill="#FFF"/>
+    <text x="55" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFF">STATIONERY</text>
+    
+    <!-- List Items -->
+    <g transform="translate(10, 205)">
+      <circle cx="5" cy="-4" r="2.5" fill="#F5A623"/><text x="15" y="0" font-family="Arial" font-size="12" fill="#333">Paper &amp; Notebooks</text>
+      <circle cx="5" cy="16" r="2.5" fill="#F5A623"/><text x="15" y="20" font-family="Arial" font-size="12" fill="#333">Pens &amp; Pencils</text>
+      <circle cx="5" cy="36" r="2.5" fill="#F5A623"/><text x="15" y="40" font-family="Arial" font-size="12" fill="#333">Calculators</text>
+      <circle cx="5" cy="56" r="2.5" fill="#F5A623"/><text x="15" y="60" font-family="Arial" font-size="12" fill="#333">Files &amp; Folders</text>
+      <circle cx="5" cy="76" r="2.5" fill="#F5A623"/><text x="15" y="80" font-family="Arial" font-size="12" fill="#333">Toner &amp; Ink</text>
+      <circle cx="5" cy="96" r="2.5" fill="#F5A623"/><text x="15" y="100" font-family="Arial" font-size="12" fill="#333">Office Essentials</text>
+    </g>
+  </g>
+
+  <!-- CARD 2: PRINTING -->
+  <g transform="translate(225, 260)">
+    <rect x="0" y="0" width="175" height="300" rx="15" fill="#FFF" filter="url(#shadow)"/>
+    <rect x="2.5" y="2.5" width="170" height="180" rx="15" fill="#E0E0E0"/>
+    <text x="85" y="90" font-family="Arial" font-size="12" fill="#888" text-anchor="middle">Insert Printer Photo</text>
+    
+    <rect x="0" y="145" width="175" height="45" fill="#0A1C4E"/>
+    <circle cx="30" cy="165" r="18" fill="#F5A623" stroke="#FFF" stroke-width="2"/>
+    <!-- Printer Icon -->
+    <rect x="23" y="160" width="14" height="8" fill="#FFF"/>
+    <rect x="25" y="155" width="10" height="5" fill="#FFF"/>
+    <text x="55" y="162" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FFF">PRINTING &amp;</text>
+    <text x="55" y="176" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FFF">DOCUMENTS</text>
+    
+    <g transform="translate(10, 205)">
+      <circle cx="5" cy="-4" r="2.5" fill="#F5A623"/><text x="15" y="0" font-family="Arial" font-size="12" fill="#333">Printing</text>
+      <circle cx="5" cy="16" r="2.5" fill="#F5A623"/><text x="15" y="20" font-family="Arial" font-size="12" fill="#333">Photocopying</text>
+      <circle cx="5" cy="36" r="2.5" fill="#F5A623"/><text x="15" y="40" font-family="Arial" font-size="12" fill="#333">Scanning</text>
+      <circle cx="5" cy="56" r="2.5" fill="#F5A623"/><text x="15" y="60" font-family="Arial" font-size="12" fill="#333">Binding</text>
+      <circle cx="5" cy="76" r="2.5" fill="#F5A623"/><text x="15" y="80" font-family="Arial" font-size="12" fill="#333">Laminating</text>
+      <circle cx="5" cy="96" r="2.5" fill="#F5A623"/><text x="15" y="100" font-family="Arial" font-size="12" fill="#333">Typing &amp; Formatting</text>
+    </g>
+  </g>
+
+  <!-- CARD 3: COMPUTER LESSONS -->
+  <g transform="translate(410, 260)">
+    <rect x="0" y="0" width="175" height="300" rx="15" fill="#FFF" filter="url(#shadow)"/>
+    <rect x="2.5" y="2.5" width="170" height="180" rx="15" fill="#E0E0E0"/>
+    <text x="85" y="90" font-family="Arial" font-size="12" fill="#888" text-anchor="middle">Insert Computer Photo</text>
+    
+    <rect x="0" y="145" width="175" height="45" fill="#0A1C4E"/>
+    <circle cx="30" cy="165" r="18" fill="#F5A623" stroke="#FFF" stroke-width="2"/>
+    <!-- Laptop Icon -->
+    <rect x="23" y="158" width="14" height="10" rx="1" fill="#FFF"/>
+    <rect x="20" y="168" width="20" height="2" fill="#FFF"/>
+    <text x="55" y="162" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FFF">COMPUTER</text>
+    <text x="55" y="176" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FFF">LESSONS</text>
+    
+    <g transform="translate(10, 205)">
+      <circle cx="5" cy="-4" r="2.5" fill="#F5A623"/><text x="15" y="0" font-family="Arial" font-size="12" fill="#333">Basic Computer Skills</text>
+      <circle cx="5" cy="16" r="2.5" fill="#F5A623"/><text x="15" y="20" font-family="Arial" font-size="12" fill="#333">Microsoft Office</text>
+      <circle cx="5" cy="36" r="2.5" fill="#F5A623"/><text x="15" y="40" font-family="Arial" font-size="12" fill="#333">Internet &amp; Email</text>
+      <circle cx="5" cy="56" r="2.5" fill="#F5A623"/><text x="15" y="60" font-family="Arial" font-size="12" fill="#333">Typing Skills</text>
+      <circle cx="5" cy="76" r="2.5" fill="#F5A623"/><text x="15" y="80" font-family="Arial" font-size="12" fill="#333">For Students &amp;</text>
+      <text x="15" y="94" font-family="Arial" font-size="12" fill="#333">Professionals</text>
+    </g>
+  </g>
+
+  <!-- CARD 4: SAFES & SECURITY -->
+  <g transform="translate(595, 260)">
+    <rect x="0" y="0" width="175" height="300" rx="15" fill="#FFF" filter="url(#shadow)"/>
+    <rect x="2.5" y="2.5" width="170" height="180" rx="15" fill="#E0E0E0"/>
+    <text x="85" y="90" font-family="Arial" font-size="12" fill="#888" text-anchor="middle">Insert Safe Photo</text>
+    
+    <rect x="0" y="145" width="175" height="45" fill="#0A1C4E"/>
+    <circle cx="30" cy="165" r="18" fill="#F5A623" stroke="#FFF" stroke-width="2"/>
+    <!-- Shield Icon -->
+    <path d="M 22 156 L 30 154 L 38 156 L 38 164 Q 38 170 30 174 Q 22 170 22 164 Z" fill="#FFF"/>
+    <text x="55" y="162" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FFF">SAFES &amp;</text>
+    <text x="55" y="176" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FFF">SECURITY</text>
+    
+    <g transform="translate(10, 205)">
+      <circle cx="5" cy="-4" r="2.5" fill="#F5A623"/><text x="15" y="0" font-family="Arial" font-size="12" fill="#333">Home Safes</text>
+      <circle cx="5" cy="16" r="2.5" fill="#F5A623"/><text x="15" y="20" font-family="Arial" font-size="12" fill="#333">Office Safes</text>
+      <circle cx="5" cy="36" r="2.5" fill="#F5A623"/><text x="15" y="40" font-family="Arial" font-size="12" fill="#333">Document Safes</text>
+      <circle cx="5" cy="56" r="2.5" fill="#F5A623"/><text x="15" y="60" font-family="Arial" font-size="12" fill="#333">Fireproof Safes</text>
+      <circle cx="5" cy="76" r="2.5" fill="#F5A623"/><text x="15" y="80" font-family="Arial" font-size="12" fill="#333">Security Solutions</text>
+    </g>
+  </g>
+
+  <!-- CARD 5: GENERAL SUPPLIES -->
+  <g transform="translate(780, 260)">
+    <rect x="0" y="0" width="175" height="300" rx="15" fill="#FFF" filter="url(#shadow)"/>
+    <rect x="2.5" y="2.5" width="170" height="180" rx="15" fill="#E0E0E0"/>
+    <text x="85" y="90" font-family="Arial" font-size="12" fill="#888" text-anchor="middle">Insert Supplies Photo</text>
+    
+    <rect x="0" y="145" width="175" height="45" fill="#0A1C4E"/>
+    <circle cx="30" cy="165" r="18" fill="#F5A623" stroke="#FFF" stroke-width="2"/>
+    <!-- Cart Icon -->
+    <path d="M 22 158 L 38 158 L 36 166 L 24 166 Z" fill="#FFF"/>
+    <circle cx="26" cy="170" r="2" fill="#FFF"/>
+    <circle cx="34" cy="170" r="2" fill="#FFF"/>
+    <text x="55" y="162" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FFF">GENERAL</text>
+    <text x="55" y="176" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FFF">SUPPLIES</text>
+    
+    <g transform="translate(10, 205)">
+      <circle cx="5" cy="-4" r="2.5" fill="#F5A623"/><text x="15" y="0" font-family="Arial" font-size="12" fill="#333">Cleaning Materials</text>
+      <circle cx="5" cy="16" r="2.5" fill="#F5A623"/><text x="15" y="20" font-family="Arial" font-size="12" fill="#333">Paper Products</text>
+      <circle cx="5" cy="36" r="2.5" fill="#F5A623"/><text x="15" y="40" font-family="Arial" font-size="12" fill="#333">Office Furniture</text>
+      <circle cx="5" cy="56" r="2.5" fill="#F5A623"/><text x="15" y="60" font-family="Arial" font-size="12" fill="#333">School Supplies</text>
+      <circle cx="5" cy="76" r="2.5" fill="#F5A623"/><text x="15" y="80" font-family="Arial" font-size="12" fill="#333">And More...</text>
+    </g>
+  </g>
+
+  <!-- ================= FOOTER SECTION ================= -->
+  
+  <!-- Footer Background -->
+  <rect x="0" y="600" width="1000" height="150" fill="#0A1C4E"/>
+  
+  <!-- Footer Yellow Accent Line -->
+  <line x1="40" y1="630" x2="960" y2="630" stroke="#F5A623" stroke-width="2" opacity="0.5"/>
+
+  <!-- Footer Features -->
+  <g transform="translate(60, 660)">
+    <!-- Feature 1 -->
+    <g transform="translate(0, 0)">
+      <circle cx="20" cy="20" r="20" fill="#F5A623"/>
+      <path d="M 12 20 L 18 26 L 28 14" fill="none" stroke="#0A1C4E" stroke-width="3" stroke-linecap="round"/>
+      <text x="50" y="18" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFF">Quality</text>
+      <text x="50" y="34" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFF">Products</text>
+    </g>
+    
+    <!-- Feature 2 -->
+    <g transform="translate(220, 0)">
+      <circle cx="20" cy="20" r="20" fill="#F5A623"/>
+      <path d="M 10 20 L 20 10 L 30 15 L 25 25 Z" fill="#0A1C4E"/>
+      <text x="50" y="18" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFF">Affordable</text>
+      <text x="50" y="34" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFF">Prices</text>
+    </g>
+    
+    <!-- Feature 3 -->
+    <g transform="translate(440, 0)">
+      <circle cx="20" cy="20" r="20" fill="#F5A623"/>
+      <path d="M 8 15 L 32 15 M 10 22 L 30 22 M 12 29 L 28 29" stroke="#0A1C4E" stroke-width="2" fill="none"/>
+      <text x="50" y="18" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFF">Friendly</text>
+      <text x="50" y="34" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFF">Service</text>
+    </g>
+    
+    <!-- Feature 4 -->
+    <g transform="translate(660, 0)">
+      <circle cx="20" cy="20" r="20" fill="#F5A623"/>
+      <path d="M 20 10 C 15 10 10 15 10 20 C 10 28 20 32 20 32 C 20 32 30 28 30 20 C 30 15 25 10 20 10 Z" fill="#0A1C4E"/>
+      <text x="50" y="18" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFF">Convenient</text>
+      <text x="50" y="34" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFF">Location</text>
+    </g>
+  </g>
+
+  <!-- Footer Motto (Bottom Right) -->
+  <g transform="translate(780, 660)">
+    <text x="0" y="15" font-family="'Brush Script MT', cursive, sans-serif" font-size="28" fill="#FFF">Your Success</text>
+    <text x="0" y="45" font-family="'Brush Script MT', cursive, sans-serif" font-size="28" fill="#FFF">Our Priority</text>
+    <path d="M 0 55 Q 50 65 120 50" fill="none" stroke="#F5A623" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+</svg>
