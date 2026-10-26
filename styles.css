@@ -214,7 +214,7 @@ header.scrolled {
   border-color: #cfd6e3;
 }
 
-.nav-links {
+.nav-links.open {
   display: flex;
   align-items: center;
   gap: 4px;
