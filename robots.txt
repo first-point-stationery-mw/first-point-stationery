@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://first-point-stationery-mw.github.io/first-point-stationery/sitemap.xml
+Sitemap: https://first-point-stationery-mw.github.io/first-point-stationery/sitemaps.xml
